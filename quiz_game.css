@@ -1,0 +1,13 @@
+.body_background{
+    background-image: url(hello.jpg);
+}
+#output
+{
+
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    border-top: 10px soid #ff0352;
+    padding: 10px;
+    float: none;
+    text-align: left;
+}

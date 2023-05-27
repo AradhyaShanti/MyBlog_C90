@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>THE MATH QUIZ GAME!</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="quiz_game.css">
+
+</head>
+
+<body class="body_background">
+    <h4 id="player1_name"></h4> <span id="player1_score"></span>
+    <h4 id="player2_name"></h4> <span id="player2_score"></span>
+
+    <div class="container">
+    <center>
+        <h2 style="color: white;">THE MATH QUIZ GAME!</h2>
+        <br>
+        <h2 style="color: chocolate;">Question Turn -</h2> <h2 style="color:rgb(255, 0, 0);" id="player1_question"></h2>
+        <h3>Answer Turn -</h3> <h3 style="color:blue;" id="player2_answer"></h3>
+        <div id="output" class="col-lg-6"></div>
+        <br>
+        <br>
+        <label>Number 1  <b style="color: red">try putting word which has 5 or more alphabet
+        </b>
+    </label>
+    <input type="number" id="question_1_input" class="form-control" placeholder="Number 1">
+    <br>
+    <label>Number 2  <b style="color: red">try putting word which has 5 or more alphabet
+        </b>
+    </label>
+    <input type="number" id="question_2_input" class="form-control" placeholder="Number 2">
+    <br>
+    <button onclick="send()" class="btn btn-success" style="width: 30%;">send</button>
+    </center>
+    <script src="quiz_game_page.js"></script>
+    <script lang="javascript">
+        localStorage.getItem("user1_name");
+            document.getElementById("player1_name").innerHTML = localStorage.getItem("user1_name") + " :";
+
+            localStorage.getItem("user2_name");
+            document.getElementById("player2_name").innerHTML = localStorage.getItem("user2_name") + " :";
+
+            localStorage.getItem("user1_name");
+            document.getElementById("player1_question").innerHTML = localStorage.getItem("user1_name");
+
+            localStorage.getItem("user2_name");
+            document.getElementById("player2_answer").innerHTML = localStorage.getItem("user2_name");
+
+        function send() {
+            question_1 = document.getElementById("question_1_input").value;
+            question_2 = document.getElementById("question_2_input").value;
+
+            localStorage.setItem("number1", question_1);
+            localStorage.setItem("number2", question_2);
+
+                window.location.replace("Quiz2.html");
+                window.location = "Quiz2.html";
+            }
+    </script>
+</body>
+</html>
